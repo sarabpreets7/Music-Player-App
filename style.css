@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+   display: flex;
+   font-family: 'Open Sans',sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.left-container {
+    display: flex;
+    justify-content: space-between;
+  flex-direction: column;
+  background-color: lightgray;
+}
+.left-container{
+    height: 100vh;
+    width: 25%;
+    background-color: #131C37;
+    display: flex;
+    justify-content: space-between;
+  flex-direction: column;
+  
+  
+}
+.right-container {
+  height: 100vh;
+  width: 30% ;
+  background-color: #0F172D;
+  color: white;
+}
+.options-menu {
+    height: 50vh;
+    width: 100%;
+    background-color: #121C36;
+    display: flex;
+   justify-content: space-between;
+    flex-direction: column;
+
+    
+    
+}
+.option-menu {
+    color: rgb(150, 148, 148);
+    display: flex;
+    font-size: small;
+    font-style:oblique;  
+    margin-left: 50px;
+    
+    
+    /* height: calc(50vh / 5); */
+    
+}
+.option-menu:hover {
+    color: #F9005A;
+    cursor: pointer;
+}
+.song-display-menu {
+    background-color:lightgray;
+}
+.bottom-head {
+    height: 12vh;
+    width: 100%;
+    background-color: #3A4258;
+}
+.title {
+    color: #F9005A;
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-style:initial;
+}
+.menu-icons {
+  margin-top: 30px;
+    display: flex;
+    
+    justify-content: center;
+    
+
+}
+.menu-icon {
+    margin-right: 30px;
+    font-size: small;
+    font-style:oblique; 
+    font-weight: 400;
+}
+.menu-icon:hover {
+    cursor: pointer;
+    color: rgb(190, 186, 186);
+}
+.player {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  .track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    background-image: URL(
+       "https://source.unsplash.com/Qrspubmx6kE/640x360");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15%;
+  }
+  .now-playing {
+    font-size: 1rem;
+  }
+   
+  .track-name {
+    font-size: 3rem;
+  }
+   
+  .track-artist {
+    font-size: 1.5rem;
+  }
+
+  .playpause-track,
+  .prev-track,
+  .next-track {
+    padding: 25px;
+    opacity: 0.8;
+   
+    /* Smoothly transition the opacity */
+    transition: opacity .2s;
+  }
+.playpause-track:hover,
+.prev-track:hover,
+.next-track:hover {
+    opacity: 1.0;
+  }
+   
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+   
+
+.song-display-menu {
+      height: 100vh;
+      width: 75%;
+      position: relative;
+  }
+.slider_container {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .seek_slider::-webkit-slider-thumb,
+  .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .seek_slider:hover,
+  .volume_slider:hover {
+    opacity: 1.0;
+  }
+   
+  .seek_slider {
+    width: 90vw;
+  }
+   
+  .volume_slider {
+    width: 10vw;
+  }
+  .current-time,
+  .total-duration {
+    padding: 10px;
+  }
+   
+  i.fa-volume-down,
+  i.fa-volume-up {
+    padding: 10px;
+    transform: rotate(90deg);
+  }
+
+  i.fa-play-circle,
+  i.fa-pause-circle,
+  i.fa-step-forward,
+  i.fa-step-backward {
+    cursor: pointer;
+  }
+   
+  .playlist-container {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .playlist-heading {
+
+    font-weight: 550;
+    align-items: center;
+    margin-bottom: 45px;
+    color: rgb(12, 241, 12);
+  }
+
+  .playlist-song{
+    display: flex;
+    min-height: 12vh;
+    max-height: 14vh;
+    color: white;
+    
+    
+
+  }
+  .playlist-song:hover{
+    cursor: pointer;
+  }
+  .song-title {
+    padding-top: 10px;
+    max-width: 12vw;
+    color: white;
+  }
+  .song-title :hover{
+    color:#F9005A
+  }
+  .songs-list {
+    padding-left: 9px;
+    height: 65vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:flex-start;
+    overflow:scroll;
+    
+    
+  }
+  .song-img {
+    margin-left: 10px;
+    height: 8vh;
+    width: 5vw;
+    margin-right: 18px;
+    
+    
+  }
+  
+  .bottom-head-sub {
+    display: flex;
+    
+  }
+  .bottom-head-img {
+    height: 5vh;
+    width: 3vw;
+    margin-top: 7px;
+    margin-left: 30px;
+    margin-right: 18px;
+    border-radius: 50%;
+  }
+  .bottom-head-song {
+    margin-top: 15px;
+    
+
+    color: white;
+  }
+  .bottom-head-curr {
+    position: fixed;
+    top: 94.4vh;
+    left: 8vw;
+    
+
+    color: white;
+  }
+  .volume-line {
+    position: absolute;
+    top: 76vh;
+    left: 1vw;
+    transform: rotate(-90deg);
+  }
+  .playlist-song:hover {
+    color:#F9005A
+  }
+  .parentt{
+    height: 99vh;
+    width: 25%;
+    background-color:#131C37;
+    position: fixed;
+    justify-content: space-evenly;
+    overflow-y: auto;
+    padding: 2rem;
+    left: 0;
+    top:0;
+    overflow: scroll;
+    
+
+  }
+  .recent-img {
+    height: 10vh;
+    width: 5vw;
+  }
+.recent-ticket {
+  margin : 25px;
+  display: flex;
+  
+  color: white;
+  /* align-items: center;
+  justify-content: space-between; */
+
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recent-song{
+  padding-top: 8px;
+  margin-left : 12px;
+  margin-right: 12px;
+}
+/* .container {
+  height: 100vh;
+  width: 100vw;
+} */
+
+.recent-title {
+  color: rgb(12, 241, 12);
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-style:initial;
+}

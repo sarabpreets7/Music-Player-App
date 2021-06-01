@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+      <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine">
+      <link rel="stylesheet"
+        href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+    <div class="left-container">
+        <div class="title">
+            MUSIC PLAYER</div>
+
+   
+    
+        <div class="options-menu">
+
+            
+
+
+        <div class="option-menu">HOME</div>
+        <div class="option-menu">BROWSE</div>
+        <div class="option-menu">RADIO</div>
+        <div class="option-menu " id="recent">RECENTLY PLAYED</div>
+        <div class="option-menu">FAVOURITE</div>
+
+        
+    </div>
+        <div class="bottom-head"></div>
+
+           <div class="bottom-head-curr">00:00</div>
+
+        </div>
+
+    </div> 
+    
+    <div class="song-display-menu">
+
+        <div class="player">
+ 
+         
+            <div class="details">
+              <div class="now-playing">PLAYING x OF y</div>
+              <div class="track-art"></div>
+              <div class="track-name">Track Name</div>
+              <div class="track-artist">Track Artist</div>
+            </div>
+
+   
+            <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                  <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                  <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                
+                <div class="next-track" onclick="nextTrack()">
+                  <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+              </div>
+
+
+                <div class="slider_container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100"
+                    value="0" class="seek_slider" onchange="seekTo()">
+                    <div class="total-duration">00:00</div>
+                </div>
+
+
+
+                    
+                      <div class="volume-line">
+                          <i class="fa fa-volume-down"></i>
+                          <input type="range" min="1" max="100"
+                          value="99" class="volume_slider" onchange="setVolume()">
+                          <i class="fa fa-volume-up"></i>
+                      </div>
+                    
+                    </div>
+
+
+        </div>
+         
+        
+
+
+       
+
+    
+    </div>
+
+    <div class="right-container">
+
+
+      <div class="menu-icons">
+            
+        <div class="material-icons menu-icon"id="search">search</div>
+        <div class="menu-icon">CONTACTS</div>
+        <div class="menu-icon">SETTING</div>
+    </div>
+
+
+        <div class="playlist-container">
+          <div class="playlist-heading">PLAYLIST</div>
+
+          <div class="songs-list" id="cells">
+
+          </div>
+          
+        </div>
+    </div>
+
+    <!-- <div class="parentt">
+              <div class="recent-ticket">
+              <img class="recent-img" src="images/download.jpg"></img>
+              <div class="recent-song">rockstar</div><br>
+              <div class="recent-artist">Post Malone</div>
+            </div>
+
+            <div class="recent-ticket">
+              <img class="recent-img" src="images/download.jpg"></img>
+              <div class="recent-song">rockstar</div>
+              <div class="recent-artist">Post Malone</div>
+            </div>
+
+            <div class="recent-ticket">
+              <img class="recent-img" src="images/download.jpg"></img>
+              <div class="recent-song">rockstar</div>
+              <div class="recent-artist">Post Malone</div>
+            </div>
+
+            <div class="recent-ticket">
+              <img class="recent-img" src="images/download.jpg"></img>
+              <div class="recent-song">rockstar</div>
+              <div class="recent-artist">Post Malone</div>
+            </div>
+
+            <div class="recent-ticket">
+              <img class="recent-img" src="images/download.jpg"></img>
+              <div class="recent-song">rockstar</div>
+              <div class="recent-artist">Post Malone</div>
+            </div>
+
+    </div> -->
+
+    
+
+
+
+
+
+    <script src="./perfect-scrollbar/dist/perfect-scrollbar.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
