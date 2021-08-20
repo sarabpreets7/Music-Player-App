@@ -33,6 +33,50 @@ let isPlaying = false;
 let updateTimer;
 let rightContainer = document.querySelector(".song-display-menu");
 let curr_track = document.createElement('audio');
+let recent = document.getElementById("recent");
+  recent.addEventListener("click",function(e){
+    console.log(e)
+    let modal = document.createElement("div");
+    modal.classList.add("parentt");
+      
+      
+
+      document.querySelector(".song-display-menu").addEventListener("click",function(){
+        modal.remove()
+      })
+    let title = document.createElement("div");
+    title.classList.add("recent-title");
+    title.innerText="Recently Played";
+    modal.append(title);
+
+    
+    
+    for(let i=0;i<recently_played.length;i++){
+      let recentTicket = document.createElement("div");
+      recentTicket.classList.add("recent-ticket");
+      recentTicket.innerHTML = `
+      <img class="recent-img" src="${recently_played[i].image}"></img>
+      <div class="column">
+          
+          <div class="recent-song">${recently_played[i].name}</div>
+      </div>`
+
+      modal.append(recentTicket);
+    }
+    let container = document.querySelector("body");
+    container.append(modal);
+    modal.animate({
+      "width":"28vw"
+  },300)
+  const psn = new PerfectScrollbar('.parentt');
+  // let rightC = document.querySelector(".close");
+  // rightC.addEventListener("click",function(){
+  // console.log("heyy")
+  // //let modal = document.querySelector(".parentt");
+  // modal.remove();
+// })
+  
+  })
  
 let recently_played =[];
 let track_list = [
@@ -289,40 +333,7 @@ function playpauseTrack() {
     // },300);
     
   }
-  let recent = document.getElementById("recent");
-  recent.addEventListener("click",function(e){
-    let modal = document.createElement("div");
-    modal.classList.add("parentt");
-
-    let title = document.createElement("div");
-    title.classList.add("recent-title");
-    title.innerText="Recently Played";
-    modal.append(title);
-    for(let i=0;i<recently_played.length;i++){
-      let recentTicket = document.createElement("div");
-      recentTicket.classList.add("recent-ticket");
-      recentTicket.innerHTML = `
-      <img class="recent-img" src="${recently_played[i].image}"></img>
-      <div class="column">
-          
-          <div class="recent-song">${recently_played[i].name}</div>
-      </div>`
-
-      modal.append(recentTicket);
-    }
-    let container = document.querySelector("body");
-    container.append(modal);
-    modal.animate({
-      "width":"28vw"
-  },300)
-  const psn = new PerfectScrollbar('.parentt');
-  let rightC = document.querySelector(".song-display-menu");
-rightC.addEventListener("click",function(){
-  let modal = document.querySelector(".parentt");
-  modal.remove();
-})
   
-  })
   
 
 
