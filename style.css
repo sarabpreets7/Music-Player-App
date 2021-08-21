@@ -306,7 +306,7 @@ body {
     color:#F9005A
   }
   .parentt{
-    height: 99vh;
+    height: 100%;
     width: 25%;
     background-color:#131C37;
     position: fixed;
@@ -316,6 +316,7 @@ body {
     left: 0;
     top:0;
     overflow: scroll;
+    overflow-x: hidden
     
 
   }
